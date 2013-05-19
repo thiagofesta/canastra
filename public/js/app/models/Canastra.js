@@ -1,0 +1,37 @@
+define(["app/models/Deck", "backbone"], function(Deck) {
+    "use strict";
+    
+    var Canastra = Backbone.Model.extend({
+
+        players: {
+            team1: [],
+            team2: []
+        },
+        
+        deck: null,
+        
+        initialize: function(options) {
+            this.players = options.players;
+            
+            this.deck = new Deck();
+            
+            this.dealCards();
+        },
+        
+        dealCards: function() {
+            var i,
+                j;
+            
+            for(j = 0; j < Canastra.CARDS_BY_HAND; j++) {
+                for(i = 0; i < this.players.team1.length; i++) {
+                    this.players.team1[i].addCard(this.deck.getCard());
+                    this.players.team2[i].addCard(this.deck.getCard());
+                }
+            }
+        }
+    }, {
+        CARDS_BY_HAND: 13
+    });
+
+    return Canastra;
+});

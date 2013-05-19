@@ -1,0 +1,17 @@
+{
+  "name": "CanastraServer",
+  "version": "0.0.1",
+  "homepage": "https://github.com/thiagofesta/canastra",
+  "author": {
+    "name": "Thiago Felipe Festa"
+  },
+  "licenses": [
+    {
+      "type": "Some License Name"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-connect": "~0.2.0"
+  }
+}

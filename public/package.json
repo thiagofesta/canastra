@@ -1,0 +1,29 @@
+{
+    "name": "Canastra",
+    "version": "0.0.1",
+    "homepage": "https://github.com/thiagofesta/canastra",
+    "author": {
+        "name": "Thiago Felipe Festa"
+    },
+    "licenses": [
+        {
+            "type": "Some License Name"
+        }
+    ],
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-jshint": "~0.4.3",
+        "grunt-contrib-jasmine": "~0.4.2",
+        "grunt-template-jasmine-requirejs": "~0.1.1",
+        "grunt-template-jasmine-istanbul": "git://github.com/thiagofesta/grunt-template-jasmine-istanbul.git"
+    },
+    "jam": {
+        "packageDir": "js/vendor/jam",
+        "baseUrl": "js",
+        "dependencies": {
+            "jquery": "1.8",
+            "backbone": "1.0.0",
+            "domReady": "2.0.1"
+        }
+    }
+}
