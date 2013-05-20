@@ -54,18 +54,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+.clearfix {
+  clear: both;
+}
+
 .card {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
+  float: left;
   width: 70px;
-  height: 101px;
+  height: 88px;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: 70px 101px;
+  background-size: 70px 88px;
 }
 .card.back-red {
   background-image: url('../img/cards/back-red.svg?1369010977');
@@ -234,4 +233,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 .card.spade13 {
   background-image: url('../img/cards/spade13.svg?1368988554');
+}
+
+#deck {
+  position: relative;
+  width: 70px;
+  height: 88px;
+}
+#deck ul li {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

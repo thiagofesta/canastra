@@ -2,13 +2,20 @@
 
 @import "compass/reset";
 
+.clearfix {
+    clear: both;
+}
+
+$cardWidth: 70px; // 200px
+$cardHeight: 88px; // 250px
+
 .card {
-    @include inline-block;
-    width: 70px;
-    height: 101px;
+    float: left;
+    width: $cardWidth;
+    height: $cardHeight;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: 70px 101px;
+    background-size: $cardWidth $cardHeight;
     
     &.back-red {
         background-image: image-url("cards/back-red.svg");
@@ -183,5 +190,21 @@
     }
     &.spade13 {
         background-image: image-url("cards/spade13.svg");
+    }
+}
+
+
+
+#deck {
+    position: relative;
+    width: $cardWidth;
+    height: $cardHeight;
+    ul {
+        li {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 }
