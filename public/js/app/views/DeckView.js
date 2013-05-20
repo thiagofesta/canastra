@@ -1,15 +1,10 @@
 define(["app/views/CardView", "backbone"], function(CardView) {
     "use strict";
     
-    var PlayerView = Backbone.View.extend({
-        events: {
-            "click .icon":          "open",
-            "click .button.edit":   "openEditDialog",
-            "click .button.delete": "destroy"
-        },
+    var DeckView = Backbone.View.extend({
+        el: "#deck",
         
-        initialize: function(options) {
-            
+        initialize: function() {
         },
         
         render: function() {
@@ -17,9 +12,9 @@ define(["app/views/CardView", "backbone"], function(CardView) {
             
             this.$el.find("ul").empty();
             
-            this.model.get("cardsOnHand").each(function(item) {
+            this.model.get("cards").each(function(card) {
                 cardView = new CardView({
-                    className: item.getClassName()
+                    className: card.getClassName(true)
                 });
                 cardView.render();
                 this.$el.find("ul").append(cardView.el);
@@ -28,5 +23,5 @@ define(["app/views/CardView", "backbone"], function(CardView) {
         
     });
 
-    return PlayerView;
+    return DeckView;
 });

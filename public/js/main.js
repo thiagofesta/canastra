@@ -33,6 +33,8 @@ require(["domReady", "app/views/CanastraView", "app/models/Player", "app/models/
             model: canastra
         });
         canastraView.render();
+        
+        window.canastraView = canastraView;
     });
     
 });

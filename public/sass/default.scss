@@ -10,6 +10,13 @@
     background-position: 0 0;
     background-size: 70px 101px;
     
+    &.back-red {
+        background-image: image-url("cards/back-red.svg");
+    }
+    &.back-black {
+        background-image: image-url("cards/back-black.svg");
+    }
+    
     &.joker-red {
         background-image: image-url("cards/joker-red.svg");
     }

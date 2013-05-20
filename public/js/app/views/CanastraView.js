@@ -1,4 +1,4 @@
-define(["app/models/Deck", "app/views/PlayerView", "backbone"], function(Deck, PlayerView) {
+define(["app/models/Deck", "app/views/PlayerView", "app/views/DeckView", "backbone"], function(Deck, PlayerView, DeckView) {
     "use strict";
     
     var CanastraView = Backbone.View.extend({
@@ -16,6 +16,8 @@ define(["app/models/Deck", "app/views/PlayerView", "backbone"], function(Deck, P
         
         render: function() {
             this.renderPlayers();
+            
+            this.renderDeck();
         },
         
         renderPlayers: function() {
@@ -36,6 +38,13 @@ define(["app/models/Deck", "app/views/PlayerView", "backbone"], function(Deck, P
                 });
                 player.render();
             }, this);
+        },
+        
+        renderDeck: function() {
+            var deckView = new DeckView({
+                model: this.model.deck
+            });
+            deckView.render();
         }
         
     });

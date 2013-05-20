@@ -67,6 +67,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-position: 0 0;
   background-size: 70px 101px;
 }
+.card.back-red {
+  background-image: url('../img/cards/back-red.svg?1369010977');
+}
+.card.back-black {
+  background-image: url('../img/cards/back-black.svg?1369011096');
+}
 .card.joker-red {
   background-image: url('../img/cards/joker-red.svg?1369009369');
 }

@@ -18,9 +18,21 @@ define(["backbone"], function() {
             return this.get("suit") + "-" + this.get("value").id + "-" + this.get("deckId");
         },
         
-        getClassName: function() {
+        getClassName: function(back) {
             var className = "card ",
-                suit = this.get("suit");
+                suit;
+            
+            // Get Back card
+            if(back === true) {
+                console.log(this.get("deckId"));
+                if(this.get("deckId") === 1) {
+                    return className + "back-black"
+                }
+                return className + "back-red";
+            }
+            
+            // Get Face card
+            suit = this.get("suit");
             
             className = className + suit;
             
