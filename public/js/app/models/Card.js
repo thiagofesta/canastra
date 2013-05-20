@@ -19,17 +19,20 @@ define(["backbone"], function() {
         },
         
         getClassName: function() {
-            var suit = this.get("suit");
+            var className = "card ",
+                suit = this.get("suit");
+            
+            className = className + suit;
             
             if(suit === Card.JOKERS[0] || suit === Card.JOKERS[1]) {
-                return "joker";
+                return className;
             }
             
-            return suit + this.get("value").id;
+            return className + this.get("value").id;
         }
         
     }, {
-        JOKERS: ["joker1", "joker2"],
+        JOKERS: ["joker-red", "joker-black"],
         SUITS: ["heart", "diamond", "club", "spade"],
         VALUES: {
             0: {

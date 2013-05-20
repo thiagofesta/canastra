@@ -1,0 +1,180 @@
+@import "compass";
+
+@import "compass/reset";
+
+.card {
+    @include inline-block;
+    width: 70px;
+    height: 101px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 70px 101px;
+    
+    &.joker-red {
+        background-image: image-url("cards/joker-red.svg");
+    }
+    &.joker-black {
+        background-image: image-url("cards/joker-black.svg");
+    }
+
+    &.diamond1 {
+        background-image: image-url("cards/diamond1.svg");
+    }
+    &.diamond2 {
+        background-image: image-url("cards/diamond2.svg");
+    }
+    &.diamond3 {
+        background-image: image-url("cards/diamond3.svg");
+    }
+    &.diamond4 {
+        background-image: image-url("cards/diamond4.svg");
+    }
+    &.diamond5 {
+        background-image: image-url("cards/diamond5.svg");
+    }
+    &.diamond6 {
+        background-image: image-url("cards/diamond6.svg");
+    }
+    &.diamond7 {
+        background-image: image-url("cards/diamond7.svg");
+    }
+    &.diamond8 {
+        background-image: image-url("cards/diamond8.svg");
+    }
+    &.diamond9 {
+        background-image: image-url("cards/diamond9.svg");
+    }
+    &.diamond10 {
+        background-image: image-url("cards/diamond10.svg");
+    }
+    &.diamond11 {
+        background-image: image-url("cards/diamond11.svg");
+    }
+    &.diamond12 {
+        background-image: image-url("cards/diamond12.svg");
+    }
+    &.diamond13 {
+        background-image: image-url("cards/diamond13.svg");
+    }
+    
+    &.club1 {
+        background-image: image-url("cards/club1.svg");
+    }
+    &.club2 {
+        background-image: image-url("cards/club2.svg");
+    }
+    &.club3 {
+        background-image: image-url("cards/club3.svg");
+    }
+    &.club4 {
+        background-image: image-url("cards/club4.svg");
+    }
+    &.club5 {
+        background-image: image-url("cards/club5.svg");
+    }
+    &.club6 {
+        background-image: image-url("cards/club6.svg");
+    }
+    &.club7 {
+        background-image: image-url("cards/club7.svg");
+    }
+    &.club8 {
+        background-image: image-url("cards/club8.svg");
+    }
+    &.club9 {
+        background-image: image-url("cards/club9.svg");
+    }
+    &.club10 {
+        background-image: image-url("cards/club10.svg");
+    }
+    &.club11 {
+        background-image: image-url("cards/club11.svg");
+    }
+    &.club12 {
+        background-image: image-url("cards/club12.svg");
+    }
+    &.club13 {
+        background-image: image-url("cards/club13.svg");
+    }
+    
+    &.heart1 {
+        background-image: image-url("cards/heart1.svg");
+    }
+    &.heart2 {
+        background-image: image-url("cards/heart2.svg");
+    }
+    &.heart3 {
+        background-image: image-url("cards/heart3.svg");
+    }
+    &.heart4 {
+        background-image: image-url("cards/heart4.svg");
+    }
+    &.heart5 {
+        background-image: image-url("cards/heart5.svg");
+    }
+    &.heart6 {
+        background-image: image-url("cards/heart6.svg");
+    }
+    &.heart7 {
+        background-image: image-url("cards/heart7.svg");
+    }
+    &.heart8 {
+        background-image: image-url("cards/heart8.svg");
+    }
+    &.heart9 {
+        background-image: image-url("cards/heart9.svg");
+    }
+    &.heart10 {
+        background-image: image-url("cards/heart10.svg");
+    }
+    &.heart11 {
+        background-image: image-url("cards/heart11.svg");
+    }
+    &.heart12 {
+        background-image: image-url("cards/heart12.svg");
+    }
+    &.heart13 {
+        background-image: image-url("cards/heart13.svg");
+    }
+    
+    
+    &.spade1 {
+        background-image: image-url("cards/spade1.svg");
+    }
+    &.spade2 {
+        background-image: image-url("cards/spade2.svg");
+    }
+    &.spade3 {
+        background-image: image-url("cards/spade3.svg");
+    }
+    &.spade4 {
+        background-image: image-url("cards/spade4.svg");
+    }
+    &.spade5 {
+        background-image: image-url("cards/spade5.svg");
+    }
+    &.spade6 {
+        background-image: image-url("cards/spade6.svg");
+    }
+    &.spade7 {
+        background-image: image-url("cards/spade7.svg");
+    }
+    &.spade8 {
+        background-image: image-url("cards/spade8.svg");
+    }
+    &.spade9 {
+        background-image: image-url("cards/spade9.svg");
+    }
+    &.spade10 {
+        background-image: image-url("cards/spade10.svg");
+    }
+    &.spade11 {
+        background-image: image-url("cards/spade11.svg");
+    }
+    &.spade12 {
+        background-image: image-url("cards/spade12.svg");
+    }
+    &.spade13 {
+        background-image: image-url("cards/spade13.svg");
+    }
+}
