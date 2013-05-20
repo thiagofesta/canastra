@@ -4,7 +4,8 @@ define(["app/collections/CardSet", "backbone"], function(CardSet) {
     var Player = Backbone.Model.extend({
         defaults: {
             'name': "Player Default",
-            'cardsOnHand': null
+            'cardsOnHand': null,
+            isCurrent: false
         },
         
         initialize: function() {

@@ -17,22 +17,22 @@ require(["domReady", "app/views/CanastraView", "app/models/Player", "app/models/
             name: "Doe"
         });
         
-//        player3 = new Player({
-//            name: "Sulivan"
-//        });
-//        
-//        player4 = new Player({
-//            name: "James"
-//        });
+        player3 = new Player({
+            name: "Sulivan"
+        });
+        
+        player4 = new Player({
+            name: "James"
+        });
         
         canastra = new Canastra({
             starts: player1,
             players: {
                 team1: [
-                    player1
+                    player1, player3
                 ],
                 team2: [
-                    player2
+                    player2, player4
                 ]
             }
         });

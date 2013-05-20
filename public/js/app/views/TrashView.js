@@ -17,7 +17,7 @@ define(["app/views/CardView", "backbone"], function(CardView) {
                     className: card.getClassName()
                 });
                 cardView.render();
-                this.$el.find("ul").prepend(cardView.el);
+                this.$el.find("ul").append(cardView.el);
             }, this);
         }
         

@@ -3,18 +3,13 @@ define(["app/models/Deck", "app/views/PlayerView", "app/views/DeckView", "app/vi
     
     var CanastraView = Backbone.View.extend({
         el: "#canastra",
-        
-        events: {
-            "click .icon":          "open",
-            "click .button.edit":   "openEditDialog",
-            "click .button.delete": "destroy"
-        },
-        
+                
         initialize: function(options) {
             this.listenTo(this.model, "change", this.render);
         },
         
         render: function() {
+            console.log("x");
             this.renderPlayers();
             
             this.renderDeck();
