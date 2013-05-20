@@ -236,7 +236,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #deck {
-  position: relative;
+  position: absolute;
+  top: 108px;
+  left: 90px;
   width: 70px;
   height: 88px;
 }
@@ -245,4 +247,106 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#trash {
+  position: absolute;
+  top: 216px;
+  left: 90px;
+  width: 70px;
+  height: 88px;
+}
+#trash ul li {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#canastra,
+#table {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#table {
+  background: url('../img/table.jpg?1369021569') no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+.x2 #team1 .player .card {
+  margin-left: -49px;
+}
+.x2 #team1 .player .card:first-child {
+  margin: 0;
+}
+.x2 #team1 .player1 {
+  position: absolute;
+  top: 0;
+  left: 90px;
+  right: 90px;
+  height: 88px;
+}
+.x2 #team1 .player2 {
+  position: absolute;
+  bottom: 0;
+  left: 90px;
+  right: 90px;
+  height: 88px;
+}
+.x2 #team2 .player .card {
+  margin-top: -61.6px;
+}
+.x2 #team2 .player .card:first-child {
+  margin: 0;
+}
+.x2 #team2 .player1 {
+  position: absolute;
+  top: 88px;
+  bottom: 88px;
+  left: 0;
+  width: 70px;
+}
+.x2 #team2 .player2 {
+  position: absolute;
+  top: 88px;
+  bottom: 88px;
+  right: 0;
+  width: 70px;
+}
+
+.x1 #team1 .player .card {
+  margin-left: -49px;
+}
+.x1 #team1 .player .card:first-child {
+  margin: 0;
+}
+.x1 #team1 .player1 {
+  position: absolute;
+  top: 0;
+  left: 90px;
+  right: 90px;
+  height: 88px;
+}
+.x1 #team1 .player2 {
+  display: none;
+}
+.x1 #team2 .player .card {
+  margin-left: -49px;
+}
+.x1 #team2 .player .card:first-child {
+  margin: 0;
+}
+.x1 #team2 .player1 {
+  position: absolute;
+  bottom: 0;
+  left: 90px;
+  right: 90px;
+  height: 88px;
+}
+.x1 #team2 .player2 {
+  display: none;
 }

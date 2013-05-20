@@ -1,4 +1,4 @@
-define(["app/models/Deck", "app/views/PlayerView", "app/views/DeckView", "backbone"], function(Deck, PlayerView, DeckView) {
+define(["app/models/Deck", "app/views/PlayerView", "app/views/DeckView", "app/views/TrashView", "backbone"], function(Deck, PlayerView, DeckView, TrashView) {
     "use strict";
     
     var CanastraView = Backbone.View.extend({
@@ -18,10 +18,14 @@ define(["app/models/Deck", "app/views/PlayerView", "app/views/DeckView", "backbo
             this.renderPlayers();
             
             this.renderDeck();
+            
+            this.renderTrash();
         },
         
         renderPlayers: function() {
             var player;
+            
+            this.$el.addClass("x" + this.model.players.team1.length);
             
             _.each(this.model.players.team1, function(item, i) {
                 player = new PlayerView({
@@ -45,6 +49,13 @@ define(["app/models/Deck", "app/views/PlayerView", "app/views/DeckView", "backbo
                 model: this.model.deck
             });
             deckView.render();
+        },
+        
+        renderTrash: function() {
+            var trashView = new TrashView({
+                model: this.model.trash
+            });
+            trashView.render();
         }
         
     });

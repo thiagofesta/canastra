@@ -1,4 +1,4 @@
-define(["app/models/Deck", "backbone"], function(Deck) {
+define(["app/models/Deck", "app/models/Trash", "backbone"], function(Deck, Trash) {
     "use strict";
     
     var Canastra = Backbone.Model.extend({
@@ -9,11 +9,13 @@ define(["app/models/Deck", "backbone"], function(Deck) {
         },
         
         deck: null,
+        trash: null,
         
         initialize: function(options) {
             this.players = options.players;
             
             this.deck = new Deck();
+            this.trash = new Trash();
             
             this.dealCards();
         },

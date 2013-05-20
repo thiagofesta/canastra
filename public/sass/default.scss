@@ -8,6 +8,11 @@
 
 $cardWidth: 70px; // 200px
 $cardHeight: 88px; // 250px
+$cardPercentHide: 70;
+$cardPercentViewWidth: ($cardWidth * $cardPercentHide) / 100;
+$cardPercentViewHeight: ($cardHeight * $cardPercentHide) / 100;
+
+$gap: 20px;
 
 .card {
     float: left;
@@ -196,7 +201,9 @@ $cardHeight: 88px; // 250px
 
 
 #deck {
-    position: relative;
+    position: absolute;
+    top: $cardHeight + $gap;
+    left: $cardWidth + $gap;
     width: $cardWidth;
     height: $cardHeight;
     ul {
@@ -207,4 +214,157 @@ $cardHeight: 88px; // 250px
             left: 0;
         }
     }
+}
+
+#trash {
+    position: absolute;
+    top: ($cardHeight + $gap) * 2;
+    left: $cardWidth + $gap;
+    width: $cardWidth;
+    height: $cardHeight;
+    ul {
+        li {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+#canastra,
+#table {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#table {
+    background: image-url("table.jpg") no-repeat 0 0;
+    background-size: 100% 100%;
+    
+}
+
+.team {
+    
+    > .player {
+        > ul {
+            > .card {
+                
+            }
+        }
+    }
+    
+}
+
+
+
+.x2 {
+    #team1 {
+        .player {
+            .card {
+                margin-left: -$cardPercentViewWidth;
+                &:first-child {
+                    margin: 0;
+                }
+            }
+        }
+        
+        .player1 {
+            position: absolute;
+            top: 0;
+            left: $cardWidth + $gap;
+            right: $cardWidth + $gap;
+            height: $cardHeight;
+        }
+        
+        .player2 {
+            position: absolute;
+            bottom: 0;
+            left: $cardWidth + $gap;
+            right: $cardWidth + $gap;
+            height: $cardHeight;
+        }
+    }
+    
+    #team2 {
+        .player {
+            .card {
+                margin-top: -$cardPercentViewHeight;
+                &:first-child {
+                    margin: 0;
+                }
+            }
+        }
+        
+        .player1 {
+            position: absolute;
+            top: $cardHeight;
+            bottom: $cardHeight;
+            left: 0;
+            width: $cardWidth;
+            
+        }
+        
+        .player2 {
+            position: absolute;
+            top: $cardHeight;
+            bottom: $cardHeight;
+            right: 0;
+            width: $cardWidth;
+        }
+    }
+}
+
+.x1 {
+    
+    #team1 {
+        .player {
+            .card {
+                margin-left: -$cardPercentViewWidth;
+                &:first-child {
+                    margin: 0;
+                }
+            }
+        }
+        
+        .player1 {
+            position: absolute;
+            top: 0;
+            left: $cardWidth + $gap;
+            right: $cardWidth + $gap;
+            height: $cardHeight;
+        }
+        
+        .player2 {
+            display: none;
+        }
+    }
+    
+    #team2 {
+        .player {
+            .card {
+                margin-left: -$cardPercentViewWidth;
+                &:first-child {
+                    margin: 0;
+                }
+            }
+        }
+        
+        .player1 {
+            position: absolute;
+            bottom: 0;
+            left: $cardWidth + $gap;
+            right: $cardWidth + $gap;
+            height: $cardHeight;
+            
+        }
+        
+        .player2 {
+            display: none;
+        }
+    }
+    
 }

@@ -24,7 +24,6 @@ define(["backbone"], function() {
             
             // Get Back card
             if(back === true) {
-                console.log(this.get("deckId"));
                 if(this.get("deckId") === 1) {
                     return className + "back-black"
                 }
